@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('Home.index');
 });
 
-//Rout::get('Admin',function(){
-//
-//});
+
+/*Route::get('/Admin',function(){
+    return view('Admin.login');
+});
+Route::post('/Admin/login', 'Admin\LoginController@login');*/
+
+Route::get('/Admin', function() {
+    return View::make('Admin.login');
+});
+Route::get('/Admin/login', 'Admin\LoginController@login');
